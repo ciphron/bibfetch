@@ -1,0 +1,10 @@
+bibfetch is a command-line tool to search bibsonomy.org for publications and add BibTex entries to a bibliography. Python 3.3 or greater is required along with the packages bibtexparser, urllib and requests, which can be installed with pip. The (slightly extended) bibsonomy client library is included here for convenience.
+
+To use bibfetch, a configuration file with the name '.bibfetch' must be placed in your home directory. This describes the path to your BibTex bibliography, your bibsonomy username and bibsonomy API key. To obtain an API key, you must register at bibsonomy.org, then go to https://www.bibsonomy.org/settings?selTab=1 to view the API key. The configuration file should contain the following 3 lines:
+
+bib = /path/to/bibliography.bib
+bibsonomy_username = your_bibsonomy_username
+bibsonomy_api_key = your_bibsonomy_api_key
+
+Running bibfetch prompts you for a search query. If results are found, they are indexed starting at 1. When you have viewed all results, a command menu is displayed. To add entry (say index 4) to your bibliography, type "a 4" (without the quotes). You will then be prompted to specify a BibTex key. The entry will then be added to your bibliography.
+
